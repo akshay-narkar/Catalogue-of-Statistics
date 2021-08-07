@@ -6,9 +6,12 @@ const initstate = {
 
 const filterReducer = (state = initstate, action) => {
   let statenew = { ...state };
+  console.log(statenew);
+  console.log(action);
   switch (action.type) {
     case CHANGE_FILTER:
       statenew = { ...statenew, filter: action.category };
+      console.log(statenew);
       return statenew;
     default:
       return state;
