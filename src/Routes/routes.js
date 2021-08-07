@@ -2,7 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 import React from 'react';
 // import Main from './Main';
 // import Nav from './Navbar';
-import App from '../App';
+import App from '../Components/App';
 import Error from '../Components/Error';
 
 export default function Routes() {
