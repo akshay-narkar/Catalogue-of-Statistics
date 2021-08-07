@@ -1,16 +1,16 @@
-const CREATE_BOOK = 'CREATE_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ALL_TEAMS = 'ALL_TEAMS';
+const TEAM_DEETS = 'TEAM_DEETS';
 const CHANGE_FILTER = 'CHANGE_FILTER';
 
-function createBook(book) {
+function allTeams(teams) {
   return ({
-    type: CREATE_BOOK,
-    book,
+    type: ALL_TEAMS,
+    teams,
   });
 }
 
-const removeBook = (index) => ({
-  type: REMOVE_BOOK,
+const teamdeets = (index) => ({
+  type: TEAM_DEETS,
   index,
 });
 
@@ -20,5 +20,5 @@ const changeFilter = (category) => ({
 });
 
 export {
-  CREATE_BOOK, REMOVE_BOOK, createBook, removeBook, changeFilter, CHANGE_FILTER,
+  allTeams, teamdeets, ALL_TEAMS, TEAM_DEETS, changeFilter, CHANGE_FILTER,
 };
