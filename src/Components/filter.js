@@ -6,14 +6,14 @@ function CategoryFilter(props) {
   const categories = ['Brazil', 'England', 'France', 'Germany', 'Italy', 'Netherlands', 'Portugal', 'Spain'];
   return (
 
-    <div className="ms-5 ">
+    <div className="ms-5  my-3">
       <label htmlFor="exampleselectInput1" className="form-label d-flex align-items-baseline m-0">
 
         <p className="m-0">CATEGORIES:</p>
 
         <select
           value={filtercat}
-          className="form-select ms-2 w-50"
+          className="form-select ms-2"
           aria-label="selectcategory"
           onChange={clickHandler}
         >
