@@ -10,7 +10,7 @@ const options = {
 async function apicall(dispatch) {
   let result1;
   const areas = [2072, 2224, 2114, 2088, 2163, 2081, 2187, 2032];
-  const url = `http://api.football-data.org/v2/teams?plan=TIER_ONE&areas=${areas}`;
+  const url = `https://api.football-data.org/v2/teams?plan=TIER_ONE&areas=${areas}`;
   try {
     await fetch(url, options, { mode: 'cors' })
       .then((response) => response.json())
@@ -26,7 +26,7 @@ async function apicall(dispatch) {
 async function teamcall(dispatch) {
   let result1;
   const id = 18;
-  const url = `http://api.football-data.org/v2/teams/${id}`;
+  const url = `https://api.football-data.org/v2/teams/${id}`;
   try {
     await fetch(url, options, { mode: 'cors' })
       .then((response) => response.json())
