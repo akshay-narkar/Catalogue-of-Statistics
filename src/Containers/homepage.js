@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import CategoryFilter from '../Components/filter';
 import { changeFilter, namechangefilter } from '../Actions/index';
 import NameFilter from '../Components/namefilter';
+import AllTeams from '../Components/allteams';
 // import Team from '../Components/teampage';
 
 function Homepage(props) {
@@ -17,13 +18,6 @@ function Homepage(props) {
     teams, filtercat, filter, namefilter, namefiltercat,
   } = props;
 
-  const width = {
-    width: '85px',
-  };
-
-  const maxwidth = {
-    width: '310px',
-  };
   // useEffect(() => {
   //   apicall(addteams);
   // }, []);
@@ -60,15 +54,21 @@ function Homepage(props) {
   return (
     <>
       <h1 className="text-center my-2 py-3">Football Stats</h1>
-      <div className="d-flex justify-content-center my-4">
-        <CategoryFilter
-          filtercat={filter}
-          clickHandler={handleFilterChange}
-        />
-        <NameFilter
-          filtercat={namefilter}
-          clickHandler={namehandleFilterChange}
-        />
+      <div className="container">
+        <div className="row my-4">
+          <div className="col-md">
+            <CategoryFilter
+              filtercat={filter}
+              clickHandler={handleFilterChange}
+            />
+          </div>
+          <div className="col-md">
+            <NameFilter
+              filtercat={namefilter}
+              clickHandler={namehandleFilterChange}
+            />
+          </div>
+        </div>
       </div>
       {/* <h1>{teams}</h1> */}
       {/* {console.log(teams)} */}
@@ -76,14 +76,16 @@ function Homepage(props) {
       {/* {teams.length === 0 ? ('Loading...') :
          (teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>))} */}
       {/* {teams.length === 0 ? ('Loading...') : console.log(teams[0].teams[0]) } */}
-      <div className="d-flex flex-wrap container m-auto justify-content-center border">
+      <AllTeams newteams={newteams} />
+      {/* <div className="d-flex flex-wrap container m-auto justify-content-center border">
         {newteams.length === 0 ? ('Loading...') : newteams.map((x) => (
-          <div id={x.id} key={Math.random()} style={maxwidth} className="d-flex align-items-center justify-content-left py-3 ps-5 border">
+          <div id={x.id} key={Math.random()} style={maxwidth} className="
+          d-flex align-items-center justify-content-left py-3 ps-5 border">
             <img src={x.crestUrl} style={width} alt="x" />
             <p className="ps-2">{x.name}</p>
           </div>
         ))}
-      </div>
+      </div> */}
       {/* map((x) => <option value={x} key={Math.random()}>{x}</option>)} */}
       {/* {teams.length === 0 ? ('Loading...') :
         teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>)} */}
