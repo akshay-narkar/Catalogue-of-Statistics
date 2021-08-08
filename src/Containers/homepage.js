@@ -1,51 +1,89 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CategoryFilter from '../Components/filter';
-import { changeFilter } from '../Actions/index';
+import { changeFilter, namechangefilter } from '../Actions/index';
+import NameFilter from '../Components/namefilter';
+// import Team from '../Components/teampage';
 
 function Homepage(props) {
+  const [state, setstate] = useState({
+    toggle: 1,
+  });
+
+  const { toggle } = state;
+
   const {
-    teams, filtercat, filter,
+    teams, filtercat, filter, namefilter, namefiltercat,
   } = props;
 
+  const width = {
+    width: '85px',
+  };
+
+  const maxwidth = {
+    width: '310px',
+  };
   // useEffect(() => {
   //   apicall(addteams);
   // }, []);
   let newteams;
 
   const handleFilterChange = (event) => {
+    setstate({ toggle: 1 });
     filtercat(event.target.value);
   };
 
-  const filterdata = (teams, filter) => {
-    if (filter === 'All') return teams[0].teams;
-    return teams[0].teams.filter((xmas) => xmas.area.name === filter);
+  const namehandleFilterChange = (event) => {
+    if (event.target.value !== '')setstate({ toggle: 2 });
+    else { setstate({ toggle: 1 }); }
+
+    namefiltercat(event.target.value);
   };
 
-  if (teams.length !== 0) { newteams = filterdata(teams, filter); console.log(newteams); } else {
+  const filterdata = (teams, filter) => {
+    if (toggle === 1) {
+      if (filter === 'All') {
+        return teams[0].teams;
+      }
+
+      return teams[0].teams.filter((xmas) => xmas.area.name === filter);
+    }
+    const re = new RegExp(namefilter, 'i');
+    return teams[0].teams.filter((xmas) => xmas.name.match(re));
+  };
+
+  if (teams.length !== 0) { newteams = filterdata(teams, filter); } else {
     newteams = teams;
   }
 
   return (
     <>
-      <h1>This is the homepage</h1>
-      <CategoryFilter
-        filtercat={filter}
-        clickHandler={handleFilterChange}
-      />
+      <h1 className="text-center my-2 py-3">Football Stats</h1>
+      <div className="d-flex justify-content-center my-4">
+        <CategoryFilter
+          filtercat={filter}
+          clickHandler={handleFilterChange}
+        />
+        <NameFilter
+          filtercat={namefilter}
+          clickHandler={namehandleFilterChange}
+        />
+      </div>
       {/* <h1>{teams}</h1> */}
       {/* {console.log(teams)} */}
       {/* {categories.map((x) => <option value={x} key={Math.random()}>{x}</option>)} */}
       {/* {teams.length === 0 ? ('Loading...') :
          (teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>))} */}
       {/* {teams.length === 0 ? ('Loading...') : console.log(teams[0].teams[0]) } */}
-      {newteams.length === 0 ? ('Loading...') : newteams.map((x) => (
-        <p id={x.id} key={Math.random()}>
-          {x.name}
-          {x.id}
-        </p>
-      ))}
-
+      <div className="d-flex flex-wrap container m-auto justify-content-center border">
+        {newteams.length === 0 ? ('Loading...') : newteams.map((x) => (
+          <div id={x.id} key={Math.random()} style={maxwidth} className="d-flex align-items-center justify-content-left py-3 ps-5 border">
+            <img src={x.crestUrl} style={width} alt="x" />
+            <p className="ps-2">{x.name}</p>
+          </div>
+        ))}
+      </div>
       {/* map((x) => <option value={x} key={Math.random()}>{x}</option>)} */}
       {/* {teams.length === 0 ? ('Loading...') :
         teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>)} */}
@@ -56,21 +94,23 @@ function Homepage(props) {
 function mapStateToProps(state) {
   const { teams } = state.teamupdatereducer;
   const { filter } = state.filterReducer;
-  return ({ teams, filter });
+  const { namefilter } = state.namefilterReducer;
+  return ({ teams, filter, namefilter });
   // return ({ booklist: books, filternew: filter });
 }
 
 const mapDispatchToProps = (dispatch) => ({
   filtercat: (category) => dispatch(changeFilter(category)),
+  namefiltercat: (category) => dispatch(namechangefilter(category)),
+
 });
 
 Homepage.propTypes = {
   teams: PropTypes.arrayOf(PropTypes.object),
   filtercat: PropTypes.func.isRequired,
+  namefiltercat: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
-
-  // teams: PropTypes.func,
-  // addteams: PropTypes.func,
+  namefilter: PropTypes.string.isRequired,
 };
 
 Homepage.defaultProps = {
