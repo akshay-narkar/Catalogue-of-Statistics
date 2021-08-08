@@ -8,7 +8,7 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './Routes/routes';
 import rootReducer from './Reducers/index';
-import apicall from './API/soccer';
+import { apicall } from './API/soccer';
 
 const initstate = {
   teams: [],
