@@ -5,7 +5,6 @@ import CategoryFilter from '../Components/filter';
 import { changeFilter, namechangefilter } from '../Actions/index';
 import NameFilter from '../Components/namefilter';
 import AllTeams from '../Components/allteams';
-// import Team from '../Components/teampage';
 
 function Homepage(props) {
   const [state, setstate] = useState({
@@ -18,9 +17,6 @@ function Homepage(props) {
     teams, filtercat, filter, namefilter, namefiltercat,
   } = props;
 
-  // useEffect(() => {
-  //   apicall(addteams);
-  // }, []);
   let newteams;
 
   const handleFilterChange = (event) => {
@@ -53,7 +49,7 @@ function Homepage(props) {
 
   return (
     <>
-      <h1 className="text-center my-2 py-3">Football Stats</h1>
+      <h1 className="text-center my-2 py-3">The Football Catalogue</h1>
       <div className="container">
         <div className="row my-4">
           <div className="col-md">
@@ -76,16 +72,19 @@ function Homepage(props) {
       {/* {teams.length === 0 ? ('Loading...') :
          (teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>))} */}
       {/* {teams.length === 0 ? ('Loading...') : console.log(teams[0].teams[0]) } */}
-      <AllTeams newteams={newteams} />
-      {/* <div className="d-flex flex-wrap container m-auto justify-content-center border">
-        {newteams.length === 0 ? ('Loading...') : newteams.map((x) => (
-          <div id={x.id} key={Math.random()} style={maxwidth} className="
-          d-flex align-items-center justify-content-left py-3 ps-5 border">
-            <img src={x.crestUrl} style={width} alt="x" />
-            <p className="ps-2">{x.name}</p>
-          </div>
-        ))}
-      </div> */}
+      {/* <AllTeams newteams={newteams} /> */}
+      <div className="d-flex flex-wrap container p-0 m-auto justify-content-center border">
+        {newteams.length === 0 ? <h5>Loading... (API might take time. Only 10 Requests/Min)</h5>
+          : newteams.map((x) => (
+            <div key={x.id} className="border d-flex align-items-center justify-content-center py-4">
+              <AllTeams x={x} />
+              {/* // <div id={x.id} key={Math.random()} style={maxwidth} className="
+          // d-flex align-items-center justify-content-left py-3 ps-5 border">
+          //   <img src={x.crestUrl} style={width} alt="x" />
+          //   <p className="ps-2">{x.name}</p> */}
+            </div>
+          ))}
+      </div>
       {/* map((x) => <option value={x} key={Math.random()}>{x}</option>)} */}
       {/* {teams.length === 0 ? ('Loading...') :
         teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>)} */}
