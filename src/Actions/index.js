@@ -10,9 +10,9 @@ function allTeams(teams) {
   });
 }
 
-const teamdeets = (index) => ({
+const teamdeets = (team) => ({
   type: TEAM_DEETS,
-  index,
+  team,
 });
 
 const changeFilter = (category) => ({
