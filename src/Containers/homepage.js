@@ -66,28 +66,14 @@ function Homepage(props) {
           </div>
         </div>
       </div>
-      {/* <h1>{teams}</h1> */}
-      {/* {console.log(teams)} */}
-      {/* {categories.map((x) => <option value={x} key={Math.random()}>{x}</option>)} */}
-      {/* {teams.length === 0 ? ('Loading...') :
-         (teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>))} */}
-      {/* {teams.length === 0 ? ('Loading...') : console.log(teams[0].teams[0]) } */}
-      {/* <AllTeams newteams={newteams} /> */}
       <div className="d-flex flex-wrap container p-0 m-auto justify-content-center border">
         {newteams.length === 0 ? <h5>Loading... (API might take time. Only 10 Requests/Min)</h5>
           : newteams.map((x) => (
-            <div key={x.id} className="border d-flex align-items-center justify-content-center py-4">
+            <div key={x.id} className="border d-flex align-items-center justify-content-center m-2 py-4">
               <AllTeams x={x} />
-              {/* // <div id={x.id} key={Math.random()} style={maxwidth} className="
-          // d-flex align-items-center justify-content-left py-3 ps-5 border">
-          //   <img src={x.crestUrl} style={width} alt="x" />
-          //   <p className="ps-2">{x.name}</p> */}
             </div>
           ))}
       </div>
-      {/* map((x) => <option value={x} key={Math.random()}>{x}</option>)} */}
-      {/* {teams.length === 0 ? ('Loading...') :
-        teams[0].teams.forEach((xyz) => <p>{ xyz.name }</p>)} */}
     </>
   );
 }
