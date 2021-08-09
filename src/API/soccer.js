@@ -23,16 +23,16 @@ async function apicall(dispatch) {
   }
 }
 
-async function teamcall(dispatch) {
+async function teamcall(key, dispatch) {
   let result1;
-  const id = 18;
+  const id = key;
   const url = `https://api.football-data.org/v2/teams/${id}`;
   try {
     await fetch(url, options, { mode: 'cors' })
       .then((response) => response.json())
       .then((response) => {
         result1 = response;
-        dispatch(allTeams(result1));
+        dispatch(result1);
       });
   } catch (e) {
     console.log(`${e} nothing found`);
