@@ -112,17 +112,28 @@ Teamcard.propTypes = {
       name: PropTypes.string,
       id: PropTypes.number,
     }),
-  }).isRequired,
+  }),
 };
 
-// Teamcard.defaultProps = {
-//   teaminfo: PropTypes.shape({
-//     id: null,
-//     shirtNumber: null,
-//     position: null,
-//     name: null,
-//     dateOfBirth: null,
-//     nationality: null,
-//     role: null,
-//   }),
-// };
+Teamcard.defaultProps = {
+  teaminfo: PropTypes.shape({
+    founded: 2020,
+    name: '',
+    shortName: '',
+    crestUrl: '',
+    nationality: '',
+    role: '',
+    website: '',
+    email: '',
+    address: '',
+    venue: '',
+    clubColors: '',
+    phone: '',
+    activeCompetitions: [{}],
+    squad: [{}],
+    area: PropTypes.shape({
+      name: '',
+      id: 1,
+    }),
+  }),
+};
