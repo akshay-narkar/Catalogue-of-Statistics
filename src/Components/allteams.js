@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function AllTeams(props) {
-  const { newteams } = props;
+  const { x } = props;
 
   const width = {
     width: '85px',
@@ -12,17 +13,35 @@ export default function AllTeams(props) {
   };
 
   return (
-    <div className="d-flex flex-wrap container m-auto justify-content-center border">
-      {newteams.length === 0 ? ('Loading...') : newteams.map((x) => (
-        <div id={x.id} key={Math.random()} style={maxwidth} className="d-flex align-items-center justify-content-left py-3 ps-5 border">
+    <>
+      {/* <Link to={{ pathname: '/foo', query: { the: 'query' } }}/> */}
+      {/* className="border d-flex align-items-center justify-content-center py-4 link" */}
+      <Link to={{ pathname: '/team', id: { key: x.id } }} className="link">
+        <div id={x.id} style={maxwidth} className="d-flex align-items-center justify-content-start px-5">
           <img src={x.crestUrl} style={width} alt="LogoHere" />
-          <p className="ps-2">{x.name}</p>
+          <div>
+            <p className="ms-3 fw-bold">{x.name}</p>
+            <p className="ms-3 fw-light">{x.area.name}</p>
+          </div>
         </div>
-      ))}
-    </div>
+      </Link>
+    </>
   );
 }
 
 AllTeams.propTypes = {
-  newteams: PropTypes.arrayOf(PropTypes.object).isRequired,
+  x: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    area: PropTypes.shape({ id: PropTypes.number, name: PropTypes.string }).isRequired,
+    crestUrl: PropTypes.string,
+    name: PropTypes.string.isRequired,
+  }),
+  // x: PropTypes.objectOf(PropTypes.number).isRequired,
+};
+
+AllTeams.defaultProps = {
+  x: PropTypes.shape({
+    crestUrl: null,
+  }),
+
 };
