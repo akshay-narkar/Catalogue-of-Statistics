@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 
 export default function Squadlist(props) {
   const { playerinfo } = props;
-  //   const dob = playerinfo.dateOfBirth;
-  //   console.log(typeof (dob));
+  let dob = playerinfo.dateOfBirth;
+  if (dob !== null) {
+    dob = playerinfo.dateOfBirth.slice(0, 10);
+  }
   return (
     <>
       <div>
@@ -40,7 +42,7 @@ export default function Squadlist(props) {
 
           <span className="fw-bold">
             {' '}
-            {playerinfo.dateOfBirth.slice(0, 10)}
+            {dob}
           </span>
 
         </p>
@@ -85,12 +87,12 @@ Squadlist.propTypes = {
 
 Squadlist.defaultProps = {
   playerinfo: PropTypes.shape({
-    id: null,
-    shirtNumber: null,
-    position: null,
-    name: null,
-    dateOfBirth: null,
-    nationality: null,
-    role: null,
+    id: 1,
+    shirtNumber: 1,
+    position: '',
+    name: '',
+    dateOfBirth: '',
+    nationality: '',
+    role: '',
   }),
 };
