@@ -32,12 +32,6 @@ function Team(props) {
       <div className="">
         {(teaminfo.length === 0 || teaminfo[0].id === state.id)
           ? <div className="container m-auto text-center border">Loading... (API might take time. Only 10 Requests/Min)</div> : <Teamcard teaminfo={teaminfo[0]} />}
-        {/* {teaminfo.length === 0 ? ('Loading...') : teaminfo[0].map((x) => (
-          <div key={Math.random()} className="border d-flex align-items-center
-          justify-content-center py-4">
-            {x}
-          </div>
-        ))} */}
       </div>
     </>
   );
@@ -47,7 +41,6 @@ Team.propTypes = {
   location: PropTypes.shape({
     id: PropTypes.objectOf(PropTypes.number),
   }).isRequired,
-  // location: PropTypes.objectOf(PropTypes.object).isRequired,
   calldispatch: PropTypes.func.isRequired,
   teaminfo: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
