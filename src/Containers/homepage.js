@@ -83,7 +83,6 @@ function mapStateToProps(state) {
   const { filter } = state.filterReducer;
   const { namefilter } = state.namefilterReducer;
   return ({ teams, filter, namefilter });
-  // return ({ booklist: books, filternew: filter });
 }
 
 const mapDispatchToProps = (dispatch) => ({
