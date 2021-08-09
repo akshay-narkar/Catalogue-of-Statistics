@@ -40,26 +40,3 @@ async function teamcall(key, dispatch) {
 }
 
 export { apicall, teamcall };
-// async function soccer() {
-//             cityname.textContent = 'Fetching Data....';
-//             const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}`;
-
-//             const response = await fetch(url);
-//             // if HTTP-status is 200-299
-//             // get the response body (the method explained below)
-//             if (response.ok) {
-//                 json1 = await response.json();
-//                 const { icon } = json1.weather[0];
-//                 const iconurl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-//                 const jsonimage = await fetch(iconurl);
-//                 if (jsonimage.ok) {
-//                 displaydata(json1, jsonimage.url);
-//                 } else {
-//                 nodata('City not found');
-//                 }
-//             } else {
-//                 nodata('City not found');
-//             }
-//             weatherdata.value = '';
-// }
-// }
