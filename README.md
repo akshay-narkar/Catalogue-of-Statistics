@@ -5,12 +5,12 @@ The Football Catalogue is a catalogue of top football teams across the world whi
 ## The Football Catalogue screenshot
 
 <div align = "center">
-<img src="./home.png" width="65%"/>
+<img src="./home.png" width="75%"/>
 </div>
 <hr/>
 
 <div align = "center">
-<img src="./teamdetails.png" width="65%"/>
+<img src="./teamdetails.png" width="75%"/>
 </div>
 
 ## Built With
