@@ -19,7 +19,8 @@ async function apicall(dispatch) {
       });
     dispatch(allTeams(result1));
   } catch (e) {
-    alert(`${e} - API failed to fetch`);
+    // emptyblock
+    // alert(`${e} - API failed to fetch`);
   }
 }
 
@@ -35,7 +36,8 @@ async function teamcall(key, dispatch) {
       });
     dispatch(result1);
   } catch (e) {
-    alert(`${e} - API failed to fetch`);
+    // emptyblock
+    // alert(`${e} - API failed to fetch`);
   }
 }
 
