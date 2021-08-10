@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+<a
+  className="link"
+  href="/team"
+  onClick={[Function]}
+>
+  <div
+    className="d-flex align-items-center justify-content-start px-5"
+    id={2}
+    style={
+      Object {
+        "width": "310px",
+      }
+    }
+  >
+    <img
+      alt="LogoHere"
+      src="X"
+      style={
+        Object {
+          "width": "85px",
+        }
+      }
+    />
+    <div>
+      <p
+        className="ms-3 fw-bold"
+      >
+        abc
+      </p>
+      <p
+        className="ms-3 fw-light"
+      >
+        X
+      </p>
+    </div>
+  </div>
+</a>
+`;
