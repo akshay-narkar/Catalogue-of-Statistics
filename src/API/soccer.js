@@ -16,10 +16,10 @@ async function apicall(dispatch) {
       .then((response) => response.json())
       .then((response) => {
         result1 = response;
-        dispatch(allTeams(result1));
       });
+    dispatch(allTeams(result1));
   } catch (e) {
-    console.log(`${e} nothing found`);
+    alert(`${e} - API failed to fetch`);
   }
 }
 
@@ -32,10 +32,10 @@ async function teamcall(key, dispatch) {
       .then((response) => response.json())
       .then((response) => {
         result1 = response;
-        dispatch(result1);
       });
+    dispatch(result1);
   } catch (e) {
-    console.log(`${e} nothing found`);
+    alert(`${e} - API failed to fetch`);
   }
 }
 
