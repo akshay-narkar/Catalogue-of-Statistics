@@ -20,8 +20,16 @@ describe('Test All actions', () => {
         },
       ];
 
+      const unexpectedActions = [
+        {
+          teams: 2,
+          type: 'ALL_TEAMS',
+        },
+      ];
+
       store.dispatch(allTeams(1));
       expect(store.getActions()).toEqual(expectedActions);
+      expect(store.getActions()).not.toEqual(unexpectedActions);
     });
   });
 
@@ -34,8 +42,16 @@ describe('Test All actions', () => {
         },
       ];
 
+      const unexpectedActions = [
+        {
+          teams: 2,
+          type: 'ALL_TEAMS',
+        },
+      ];
+
       store.dispatch(teamdeets(4));
       expect(store.getActions()).toEqual(expectedActions);
+      expect(store.getActions()).not.toEqual(unexpectedActions);
     });
   });
 
@@ -48,8 +64,16 @@ describe('Test All actions', () => {
         },
       ];
 
+      const unexpectedActions = [
+        {
+          teams: 2,
+          type: 'ALL_TEAMS',
+        },
+      ];
+
       store.dispatch(changeFilter('England'));
       expect(store.getActions()).toEqual(expectedActions);
+      expect(store.getActions()).not.toEqual(unexpectedActions);
     });
   });
 
@@ -62,8 +86,15 @@ describe('Test All actions', () => {
         },
       ];
 
+      const unexpectedActions = [
+        {
+          teams: 2,
+          type: 'ALL_TEAMS',
+        },
+      ];
       store.dispatch(namechangefilter('ABC'));
       expect(store.getActions()).toEqual(expectedActions);
+      expect(store.getActions()).not.toEqual(unexpectedActions);
     });
   });
 });
