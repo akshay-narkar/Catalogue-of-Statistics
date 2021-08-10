@@ -43,9 +43,16 @@ If you want to repack the file
 - Run `npm run build` to bundle the files in the src folder & product ouput in dist folder
 - Run `npm run start` to check live server
 
+## Testing
+
+- Jest Testing Framework has been used to test the Redux actions and reducers.
+- Main React components have been tested with Snapshot testing.
+
+- Run `npm run test` to run the tests
+
 ## Live Link of the project
 
-[Live-Project](https://football-team-stats.herokuapp.com)
+[Live-Project](https://the-football-catalogue.herokuapp.com/)
 
 ## Author
 
