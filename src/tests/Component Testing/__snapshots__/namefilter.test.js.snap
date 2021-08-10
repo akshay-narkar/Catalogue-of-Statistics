@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+<div
+  className="ms-5 my-3"
+>
+  <label
+    className="form-label d-flex align-items-baseline"
+    htmlFor="exampleFormControlInput1"
+  >
+    <p
+      className="m-0"
+    >
+      Team Name:
+    </p>
+    <input
+      className="form-control text-box ms-2 w-50"
+      id="exampleFormControlInput1"
+      onChange={[Function]}
+      placeholder="Title"
+      type="text"
+      value=""
+    />
+  </label>
+</div>
+`;
