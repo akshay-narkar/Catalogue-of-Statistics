@@ -89,7 +89,7 @@ Squadlist.defaultProps = {
     shirtNumber: 1,
     position: '',
     name: '',
-    dateOfBirth: '',
+    dateOfBirth: '1-1-01',
     nationality: '',
     role: '',
   }),
