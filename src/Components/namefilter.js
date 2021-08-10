@@ -14,8 +14,12 @@ function NameFilter(props) {
 }
 
 NameFilter.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
-  filtercat: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func,
+  filtercat: PropTypes.string,
 };
 
+NameFilter.defaultProps = {
+  clickHandler: () => {},
+  filtercat: '',
+};
 export default NameFilter;

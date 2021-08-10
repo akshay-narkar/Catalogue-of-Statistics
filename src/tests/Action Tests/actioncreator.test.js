@@ -1,7 +1,7 @@
 import configureStore from 'redux-mock-store';
 import {
   allTeams, teamdeets, changeFilter, namechangefilter,
-} from '../Actions/index';
+} from '../../Actions/index';
 
 const mockStore = configureStore();
 const store = mockStore();

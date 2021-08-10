@@ -1,12 +1,12 @@
 import {
   ALL_TEAMS, TEAM_DEETS,
   NAME_CHANGE_FILTER, CHANGE_FILTER,
-} from '../Actions/index';
+} from '../../Actions/index';
 
-import filterReducer from '../Reducers/filter';
-import teamupdatereducer from '../Reducers/teams';
-import teamdeetsReducer from '../Reducers/teamdeets';
-import namefilterReducer from '../Reducers/namefilter';
+import filterReducer from '../../Reducers/filter';
+import teamupdatereducer from '../../Reducers/teams';
+import teamdeetsReducer from '../../Reducers/teamdeets';
+import namefilterReducer from '../../Reducers/namefilter';
 
 const state = { teams: [] };
 const statenew = { teams: [], teaminfo: [] };
