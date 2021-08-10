@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
+import slice from '../helper/slice';
 
 export default function Squadlist(props) {
   const { playerinfo } = props;
-  let dob = playerinfo.dateOfBirth;
-  if (dob !== null) {
-    dob = playerinfo.dateOfBirth.slice(0, 10);
-  }
+  const dob = slice(playerinfo);
   return (
     <>
       <div>
