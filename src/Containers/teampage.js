@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import { connect } from 'react-redux';
 import { teamcall } from '../API/soccer';
 import { teamdeets } from '../Actions/index';
@@ -40,9 +39,15 @@ function Team(props) {
 Team.propTypes = {
   location: PropTypes.shape({
     id: PropTypes.objectOf(PropTypes.number),
-  }).isRequired,
+  }),
   calldispatch: PropTypes.func.isRequired,
   teaminfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+Team.defaultProps = {
+  location: {
+    id: { key: 1 },
+  },
 };
 
 const mapDispatchToProps = (dispatch) => ({
