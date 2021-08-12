@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+Array [
+  <div
+    className="container"
+  >
+    <a
+      className="link"
+      href="/"
+      onClick={[Function]}
+    >
+      <button
+        className="my-2 p-2 btn btn-primary btn-sm"
+        type="button"
+      >
+        Home
+      </button>
+    </a>
+  </div>,
+  <h1
+    className="text-center mb-3 pb-3"
+  >
+     Team Details 
+  </h1>,
+  <div
+    className=""
+  >
+    <div
+      className="container m-auto text-center border"
+    >
+      Loading... (API might take time. Only 10 Requests/Min)
+    </div>
+  </div>,
+]
+`;

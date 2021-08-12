@@ -1,0 +1,346 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+Array [
+  <div
+    className="container"
+  >
+    <div
+      className="row border align-items-center"
+    >
+      <div
+        className="col-lg-3 p-0 text-center"
+      >
+        <img
+          alt="logo"
+          src="-"
+          style={
+            Object {
+              "padding": 15,
+              "width": "175px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="col-lg-9 container align-items-center"
+      >
+        <div
+          className="row p-0 border"
+        >
+          <h5
+            className="px-4 py-4 mb-0 col-md-4 border"
+          >
+            <span>
+              Name: 
+            </span>
+            Real Madrid FC
+          </h5>
+          <h5
+            className="px-4 py-4 mb-0 col-md-4 border"
+          >
+            <span>
+              Country:  
+            </span>
+            
+          </h5>
+          <h5
+            className="px-4 py-4 mb-0 col-md-4 border"
+          >
+            <span>
+              Shortname:  
+            </span>
+            Real Madrid
+          </h5>
+        </div>
+        <div
+          className="p-0 row  border"
+        >
+          <h5
+            className="px-4 py-4 mb-0 border"
+          >
+            <span>
+              Address:  
+            </span>
+            -
+          </h5>
+        </div>
+        <div
+          className="row p-0 border"
+        >
+          <h5
+            className="px-4 py-4 mb-0 col-md-4 border"
+          >
+            <span>
+              Founded: 
+            </span>
+            1902
+          </h5>
+          <h5
+            className="px-4 py-4 mb-0 col-md-4 border"
+          >
+            <span>
+              Kits: 
+            </span>
+            -
+          </h5>
+          <h5
+            className="px-4 py-4 mb-0 col-md-4 border"
+          >
+            <span>
+              Venue: 
+            </span>
+            -
+          </h5>
+        </div>
+        <div
+          className="row p-0 border"
+        >
+          <h5
+            className="px-4 py-4 mb-0 col-md-6 border text-break"
+          >
+            <span>
+              Website: 
+            </span>
+            <a
+              href="-"
+            >
+              -
+            </a>
+          </h5>
+          <h5
+            className="px-4 py-4 mb-0 col-md-6 border text-break"
+          >
+            <span>
+              Email: 
+            </span>
+            -
+          </h5>
+        </div>
+        <div
+          className="row p-0 border"
+        >
+          <h5
+            className="px-4 py-4 mb-0 col-md-6 border"
+          >
+            <span>
+              League: 
+            </span>
+            La Liga
+          </h5>
+          <h5
+            className="px-4 py-4 mb-0 col-md-6 border"
+          >
+            <span>
+              Contact: 
+            </span>
+            -
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="container px-0"
+  >
+    <div>
+      <h1
+        className=" mt-5 mb-4 text-center text-decoration-underline"
+      >
+        SQUAD LIST
+      </h1>
+    </div>
+    <div
+      className="d-flex flex-wrap justify-content-center container m-auto border p-0"
+    >
+      <div
+        className="border d-flex align-items-center py-4"
+        style={
+          Object {
+            "padding": 15,
+            "width": "300px",
+          }
+        }
+      >
+        <div>
+          <p
+            className="ms-3 fw-light"
+          >
+            Name :
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            />
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Position :
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Nationality:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Birth Date:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            No:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Role:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        className="border d-flex align-items-center py-4"
+        style={
+          Object {
+            "padding": 15,
+            "width": "300px",
+          }
+        }
+      >
+        <div>
+          <p
+            className="ms-3 fw-light"
+          >
+            Name :
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            />
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Position :
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Nationality:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Birth Date:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            No:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+          <p
+            className="ms-3 fw-light"
+          >
+            Role:
+             
+            <span>
+               
+            </span>
+            <span
+              className="fw-bold"
+            >
+               
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div />
+  </div>,
+]
+`;

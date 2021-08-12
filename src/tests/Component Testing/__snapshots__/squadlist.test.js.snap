@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI is unaltered wrt first snapshot 1`] = `
+<div>
+  <p
+    className="ms-3 fw-light"
+  >
+    Name :
+    <span>
+       
+    </span>
+    <span
+      className="fw-bold"
+    >
+      ABC
+    </span>
+  </p>
+  <p
+    className="ms-3 fw-light"
+  >
+    Position :
+    <span>
+       
+    </span>
+    <span
+      className="fw-bold"
+    >
+       
+      FWD
+       
+    </span>
+  </p>
+  <p
+    className="ms-3 fw-light"
+  >
+    Nationality:
+     
+    <span>
+       
+    </span>
+    <span
+      className="fw-bold"
+    >
+       
+      Spanish
+    </span>
+  </p>
+  <p
+    className="ms-3 fw-light"
+  >
+    Birth Date:
+     
+    <span>
+       
+    </span>
+    <span
+      className="fw-bold"
+    >
+       
+      12-02-90
+    </span>
+  </p>
+  <p
+    className="ms-3 fw-light"
+  >
+    No:
+     
+    <span>
+       
+    </span>
+    <span
+      className="fw-bold"
+    >
+       
+      1
+    </span>
+  </p>
+  <p
+    className="ms-3 fw-light"
+  >
+    Role:
+     
+    <span>
+       
+    </span>
+    <span
+      className="fw-bold"
+    >
+       
+      Player
+    </span>
+  </p>
+</div>
+`;

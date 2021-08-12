@@ -1,65 +1,70 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Catalogue Of Statistics
 
-# Project Name
+The Football Catalogue is a catalogue of top football teams across the world which can be filtered and browsed to get details of the club like Squad, contact information etc. Built using React & Redux.
 
-> One paragraph statement about the project.
+## The Football Catalogue screenshot
 
-![screenshot](./app_screenshot.png)
+<div align = "center">
+<img src="./home.png" width="75%"/>
+</div>
+<hr/>
 
-Additional description about the project and its features.
+<div align = "center">
+<img src="./teamdetails.png" width="75%"/>
+</div>
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- npm
+- React
+- React-DOM
+- Redux
+- CSS
+- JSX
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+Get the Api Key
 
+- Go to `https://www.football-data.org/client/register`
+- Sign up and get your free API key
+- Create a .env file the root directory
+- In the file `REACT_APP_KEY = YOUR API KEY` paste this line and replace `YOUR API KEY`text with the received key
 
-To get a local copy up and running follow these simple example steps.
+To set up a local copy of the project
 
-### Prerequisites
+- `git clone git@github.com:akshay-narkar/Catalogue-of-Statistics.git`
+- `cd final-branch`
+- `git pull origin final-branch`
 
-### Setup
+If you want to repack the file
 
-### Install
+- Run `npm install` on the terminal to install dependancies
+- Run `npm run build` to bundle the files in the src folder & product ouput in dist folder
+- Run `npm run start` to check live server
 
-### Usage
+## Testing
 
-### Run tests
+- Jest Testing Framework has been used to test the Redux actions and reducers.
+- Main React components have been tested with Snapshot testing.
 
-### Deployment
+- Run `npm run test` to run the tests
 
+## Live Link of the project
 
+[Live-Project](https://the-football-catalogue.herokuapp.com/)
 
-## Authors
+## Author
 
-👤 **Author1**
+👤 **Akshay Narkar**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- Github: [@akshay-narkar](https://github.com/akshay-narkar)
+- Twitter: [Akshay](https://www.twitter.com/akidoit)
+- Linkedin: [Akshay Narkar](https://www.linkedin.com/in/akshaynarkar25/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
@@ -67,10 +72,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](LICENSE) licensed.
