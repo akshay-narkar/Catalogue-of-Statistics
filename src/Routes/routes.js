@@ -10,7 +10,7 @@ export default function Routes() {
       <div className="maindiv mt-2 mb-5 px-3">
         <Switch>
           <Route path="/" component={App} exact />
-          <Route path="/team" component={Team} />
+          <Route path="/team/:id" component={Team} />
           <Route component={Error} />
         </Switch>
       </div>
